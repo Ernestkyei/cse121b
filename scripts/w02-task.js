@@ -24,13 +24,15 @@ imageElement.setAttribute('alt', `Profile image of ${fullName}`);
 
 
 /* Step 5 - Array */
-let favFoods = ['Beans', 'Rice with Stew', 'Fufuo with light soap'];
-let newFavorite = 'Pizza';
+let favFoods = ['Beans', ' Rice with Stew', ' Fufuo with light soap'];
+let newFavorite = ['Pizza',' yam with stew',' plantain with stew',' Oat'];
+
 
 favFoods.push(newFavorite); 
-favFoods.shift(); 
-favFoods.pop(); 
+let removedFood = favFoods.shift();
+
 foodElement.innerHTML = favFoods.join('<br>');
+foodElement.innerHTML += `<br>${removedFood}`;
 
 
 
