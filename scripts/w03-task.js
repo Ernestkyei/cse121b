@@ -85,33 +85,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     getTotalButton.addEventListener("click", calculateTotal);
-
     
     function calculateTotal() {
-       
         const subtotal = parseFloat(subtotalInput.value) || 0;
+    const isMember = memberCheckbox.checked;
 
-       
-        const isMember = memberCheckbox.checked;
-
-       
         let totalDue;
 
-        if (subtotal > 100 && isMember) {
-            totalDue = subtotal * 0.9; // 10% discount for club members with subtotal over 100
-        } else {
-            totalDue = subtotal;
-        }
+        if (subtotal >= 0) {
+            if (isMember) {
+        
+                totalDue = subtotal * 0.9;
+            } else {
+                totalDue = subtotal;
+            }
 
-        totalSpan.textContent = `$ ${totalDue.toFixed(2)}`;
+          
+            totalSpan.textContent = `$${totalDue.toFixed(2)}`;
+        } else {
+          
+            alert("Please enter a valid subtotal amount.");
+        }
     }
 });
 
 
 
+
+
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
-const sourceArray = Array.from({ length: 10 }, (_, index) => index + 1);
+const sourceArray = Array.from({ length: 13 }, (_, index) => index + 1);
 document.getElementById("array").innerHTML=sourceArray;
 
 /* Output Odds Only Array */
