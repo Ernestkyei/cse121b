@@ -10,7 +10,7 @@ function add(num1, num2){
 function addNumbers(){
     const num1 = parseInt(document.getElementById("add1").value);
     const num2 = parseInt(document.querySelector("#add2").value);
-    const sum = add(num1,num2);
+    const sum = add(num1,  num2);
 
     const total = document.getElementById("sum")
     total.value = sum;
