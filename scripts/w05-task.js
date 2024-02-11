@@ -2,7 +2,7 @@
 /* Declare and initialize global variables */
 const templesElement = document.getElementById('temples');
 let templeList = [];
-
+//Ernest
 /* async displayTemples Function */
 const displayTemples = (temples) => {
     temples.forEach (temple => {
